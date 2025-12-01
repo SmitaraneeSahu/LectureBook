@@ -8,7 +8,7 @@ export async function getUser() {
     const response = await fetch(`${import.meta.env.VITE_HOST}/api/users/${browserData.userid}`, {
     method: "GET",
     headers: {
-        "Conntent-Type": "application/json",
+        "Content-Type": "application/json",
         Authorization: `Bearer ${browserData.token}`,
     },
     });

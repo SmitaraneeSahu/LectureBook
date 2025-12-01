@@ -1,7 +1,7 @@
 export async function login(authDetails){
     const response = await fetch(`${import.meta.env.VITE_HOST}/login`,{
         method: "POST",
-        headers: {"content-Type" : "application/json"},
+        headers: {"Content-Type" : "application/json"},
         body: JSON.stringify(authDetails)
       });
     if(!response.ok){
@@ -19,7 +19,7 @@ export async function login(authDetails){
 export async function register(authDetails){
     const response = await fetch(`${import.meta.env.VITE_HOST}/register`,{
         method: "POST",
-        headers: {"content-Type" : "application/json" },
+        headers: {"Content-Type" : "application/json" },
         body: JSON.stringify(authDetails)
       })
     if(!response.ok){
