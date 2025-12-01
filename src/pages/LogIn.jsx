@@ -44,7 +44,7 @@ export default function LogIn() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-1 md:gap-3 px-4">
           {/* Lamp */}
           <div className="flex justify-center items-center">
-            <LampLogin showLogIn={showLogin} setShowLogIn={setShowLogin} className="w-24 h-24 md:w-48 md:h-48"/>
+            <LampLogin showLogIn={showLogin} setShowLogIn={setShowLogin} className="backdrop-contrast-200 w-24 h-24 md:w-48 md:h-48"/>
           </div>
 
           {/* Form */}

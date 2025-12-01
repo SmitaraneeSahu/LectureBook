@@ -5,7 +5,7 @@ function getSession(){
 }
 export async function getUser() {
     const browserData = getSession();
-    const response = await fetch(`${import.meta.env.VITE_HOST}/600/users/${browserData.userid}`, {
+    const response = await fetch(`${import.meta.env.VITE_HOST}/api/users/${browserData.userid}`, {
     method: "GET",
     headers: {
         "Conntent-Type": "application/json",
@@ -31,7 +31,7 @@ export async function  createOrder(cartList,total,user) {
                 id: browserData.userid
             }
         }
-        const response = await fetch(`${import.meta.env.VITE_HOST}/660/orders`,{
+        const response = await fetch(`${import.meta.env.VITE_HOST}/api/orders`,{
             method: "POST",
             headers: {"Content-Type" : "application/json", Authorization: `Bearer ${browserData.token}`},
             body: JSON.stringify(order)
@@ -44,7 +44,7 @@ export async function  createOrder(cartList,total,user) {
 }
 export async function getUserOrder() {
     const browserData = getSession();
-    const response = await fetch(`${import.meta.env.VITE_HOST}/660/orders?user.id=${browserData.userid}`,{
+    const response = await fetch(`${import.meta.env.VITE_HOST}/api/orders?user.id=${browserData.userid}`,{
             method: "GET",
             headers: {"Content-Type" : "application/json", Authorization: `Bearer ${browserData.token}`},
         });
