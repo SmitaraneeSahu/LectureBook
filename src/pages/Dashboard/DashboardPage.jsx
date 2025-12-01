@@ -22,7 +22,7 @@ export default function DashboardPage() {
         fetchOrders();
     },[])
   return (
-    <>
+    <main>
     <section className="space-y-2">
         <p className="text-2xl text-center font-semibold dark:text-slate-100 my-5 underline underline-offset-8">Orders</p>
     </section>
@@ -33,6 +33,6 @@ export default function DashboardPage() {
     <section>
     {!orders.length && <DashboardEmpty/>}
     </section>
-    </>
+    </main>
   )
 }
