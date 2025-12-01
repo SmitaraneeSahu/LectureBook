@@ -15,7 +15,7 @@ export default function LampLogin({showLogin, setShowLogin}) {
         backgroundColor: "#111827", // Optional background
       }}
     >
-        <iframe src='../../public/Lamp/index.html' title="Login Page"
+        <iframe src='/Lamp/index.html' title="Login Page"
           className='bg-white dark:bg-gray-900'
           style={{
           width: "100%",
