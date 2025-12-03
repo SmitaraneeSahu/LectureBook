@@ -9,8 +9,10 @@ import { toast } from 'react-toastify';
 export default function LogIn() {
   const navigate = useNavigate();
   useTitle("Login");
+  const [mounted, setMounted] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   useEffect(() => {
+    setMounted(true);
     const iframe = document.querySelector("iframe");
     function updateGlowColor() {
         const lampDoc = iframe.contentDocument || iframe.contentWindow.document;
@@ -72,7 +74,7 @@ export default function LogIn() {
           </div>
 
           {/* Form */}
-            <div style={{ opacity: showLogin ? 1 : 0 }} className="rounded-md animate-fadeIn shadow-glow border-glowDark p-4 w-full sm:w-[400px]">
+            <div style={{ opacity: mounted && showLogin ? 1 : 0 }} className="rounded-md animate-fadeIn shadow-glow border-glowDark p-4 w-full sm:w-[400px]">
               <form className="flex flex-col w-full " onSubmit={handleLogin}>
                 <div className="mb-6">
                   <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
