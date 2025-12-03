@@ -119,3 +119,4 @@ Draggable.create(PROXY, {
 
 
 gsap.set('.lamp', { display: 'block' });
+
