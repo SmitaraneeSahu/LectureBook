@@ -75,7 +75,7 @@ export default function LogIn() {
 
           {/* Form */}
             <div style={{ opacity: mounted && showLogin ? 1 : 0, visibility: mounted ? "visible" : "hidden" }} className="rounded-md animate-fadeIn shadow-glow border-glowDark p-4 w-full sm:w-[400px]">
-              <form className="flex flex-col w-full " onSubmit={handleLogin}>
+              <form style={{ opacity: mounted && showLogin ? 1 : 0}} className="flex flex-col w-full " onSubmit={handleLogin}>
                 <div className="mb-6">
                   <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">
                     Your email
